@@ -1,0 +1,79 @@
+$fontSize: 1.5rem;
+
+header {
+    display: flex;
+    width: 100vw;
+    background-color: $mainBgc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navBar {
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+header .navBar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header .navBar ul li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+header .navBar ul li a {
+
+    display: block;
+    text-align: center;
+    line-height: 2;
+    font-size: $fontSize;
+    font-family: $fontF;
+    text-decoration: none;
+    color: $mainColor;
+    border: 1px solid #000;
+    background-color: $mainBgc;
+}
+
+header .navBar ul li a:hover {
+
+    color: $secondaryColor;
+}
+
+header .navBar ul li ul {
+    display: none;
+}
+
+header .navBar ul li:hover ul {
+    display: flex;
+}
+
+header section {
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header section h2 {
+    font-family: $fontF;
+    font-size: $fontSize;
+    color: $mainColor;
+}
+
+header section img[alt=Logo] {
+    // width: 100px;
+    padding: 10px 20px;
+}
