@@ -29,7 +29,7 @@
     margin: 20% auto;
 }
 
-.formContainer h2 {
+.formContainer .title {
     font-size: 25px;
     color: white;
     text-align: center;
@@ -38,7 +38,7 @@
     width: 100%;
 }
 
-.formContainer p {
+.formContainer .text {
     font-size: 14px;
     color: white;
     text-align: center;
@@ -69,7 +69,7 @@
     margin-bottom: 20px;
 }
 
-.formContainer form input[type='button'] {
+.formContainer form #sendBtn {
     display: block;
     font-size: 15px;
     color: white;
@@ -94,13 +94,13 @@
         width: 40%;
     }
 
-    .formContainer h2 {
+    .formContainer .title {
         font-size: 36px;
         padding-bottom: 20px;
         text-align: left;
     }
 
-    .formContainer p {
+    .formContainer .text {
         font-size: 20px;
         padding-bottom: 45px;
         text-align: left;
@@ -115,7 +115,7 @@
         height: 50px;
     }
 
-    .formContainer form input[type='button'] {
+    .formContainer form #sendBtn {
         font-size: 22px;
         margin-top: 30px;
     }

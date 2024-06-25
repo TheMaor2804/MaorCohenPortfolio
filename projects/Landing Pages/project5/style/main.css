@@ -27,14 +27,14 @@
     margin: 0 -20px 5px;
 }
 
-.textContainer>h2 {
+.textContainer>.title {
     text-align: center;
     font: normal normal bold 36px/47px Assistant;
     letter-spacing: 0px;
     color: #0EE1DA;
 }
 
-.textContainer>p {
+.textContainer>.text {
     text-align: center;
     font: normal normal normal 20px/26px Assistant;
     letter-spacing: 0px;
@@ -53,7 +53,7 @@
     gap: 30px;
 }
 
-.form>h2 {
+.form>.formTitle {
     text-align: center;
     font: normal normal bold 25px/33px Assistant;
     letter-spacing: 0px;
@@ -61,7 +61,7 @@
     margin-bottom: -15px;
 }
 
-.form>p {
+.form>.formText {
     text-align: center;
     font: normal normal normal 15px/19px Assistant;
     letter-spacing: 0px;
@@ -217,19 +217,19 @@
         padding: 0 20px;
     }
 
-    .textContainer>h2 {
+    .textContainer>.title {
         font: normal normal bold 61px/80px Assistant;
     }
 
-    .textContainer>p {
+    .textContainer>.text {
         font: normal normal normal 20px/26px Assistant;
     }
 
-    .form>h2 {
+    .form>.formTitle {
         font: normal normal bold 35px/46px Assistant;
     }
 
-    .form>p {
+    .form>.formText {
         font: normal normal normal 20px/26px Assistant;
     }
 

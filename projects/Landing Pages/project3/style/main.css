@@ -36,13 +36,13 @@
     width: 50%;
 }
 
-.titleContainer>h1 {
+.titleContainer>.title {
     font: normal normal 900 43px/63px Heebo;
     letter-spacing: 0px;
     color: #020253;
 }
 
-.titleContainer>p {
+.titleContainer>.text {
     font: normal normal normal 20px/29px Heebo;
     letter-spacing: 0px;
     color: #020253;
@@ -110,11 +110,11 @@
         width: 100%;
     }
 
-    .titleContainer>h1 {
+    .titleContainer>.title {
         font: normal normal 900 28px/41px Heebo;
     }
 
-    .titleContainer>p {
+    .titleContainer>.text {
         font: normal normal normal 15px/22px Heebo;
     }
 
