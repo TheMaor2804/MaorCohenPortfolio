@@ -74,6 +74,10 @@
     margin: 20px;
 }
 
+#logo a {
+    text-decoration: none;
+}
+
 #topHeading {
     width: 100vw;
     max-width: 100%;

@@ -1,9 +1,12 @@
 //dropdown menu
 const hamburger = document.querySelector('#hamburger');
 const dropdown = document.querySelector('#navDropdown');
-isMenuActive = false;
+const navAnchors = document.getElementById('navDropdown').querySelector('ul');
 
-hamburger.addEventListener('click', () => {
+let isMenuActive = false;
+
+
+function toggleDropdown() {
     if (!isMenuActive) {
         dropdown.style.display = "flex";
         isMenuActive = !isMenuActive;
@@ -11,7 +14,15 @@ hamburger.addEventListener('click', () => {
         dropdown.style.display = "none";
         isMenuActive = !isMenuActive;
     }
-});
+}
+
+if (navAnchors) {
+    navAnchors.querySelectorAll('li a').forEach(a => {
+        a.addEventListener('click', toggleDropdown)
+    });
+}
+
+if (hamburger) { hamburger.addEventListener('click', toggleDropdown); }
 //end
 
 //cv download button
