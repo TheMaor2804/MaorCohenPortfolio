@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: wrap;
+    background-image: url(../images/Path15.png);
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+}
+
+.formContainer {
+    display: flex;
+    width: 90%;
+    max-width: 568px;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 50px 35px;
+    margin: 20% auto;
+}
+
+.formContainer h2 {
+    font-size: 25px;
+    color: white;
+    text-align: center;
+    font-family: Heebo;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.formContainer p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    font-family: Heebo;
+    line-height: 1.5;
+    width: 100%;
+}
+
+.formContainer form {
+    width: 100%;
+}
+
+.formContainer form label {
+
+    color: white;
+    text-align: left;
+    font-family: Heebo;
+    font-weight: bold;
+}
+
+.formContainer form input {
+    height: 28px;
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    text-align: left;
+    font-family: Heebo;
+    margin-bottom: 20px;
+}
+
+.formContainer form input[type='button'] {
+    display: block;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    font-family: Heebo;
+    background-color: #D31C75;
+    border: 0;
+    font-weight: bold;
+    padding: 5px 15px;
+    width: 30%;
+    min-width: 50px;
+}
+
+@media (min-width: 992px) {
+    .container {
+        background-size: 100% 50%;
+    }
+
+    .formContainer {
+        margin: 10% 20%;
+        gap: 0;
+        width: 40%;
+    }
+
+    .formContainer h2 {
+        font-size: 36px;
+        padding-bottom: 20px;
+        text-align: left;
+    }
+
+    .formContainer p {
+        font-size: 20px;
+        padding-bottom: 45px;
+        text-align: left;
+    }
+
+
+    .formContainer form label {
+        font-size: 16px;
+    }
+
+    .formContainer form input {
+        height: 50px;
+    }
+
+    .formContainer form input[type='button'] {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+}

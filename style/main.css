@@ -5,77 +5,549 @@
   box-sizing: border-box;
 }
 
-header {
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  padding-top: 50px;
+}
+
+#desktop {
+  display: none;
+}
+
+#mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100vw;
+  max-width: 100%;
   background-color: black;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-wrap: wrap;
+  transition: all 0.5s ease-in-out;
+  z-index: 10000;
 }
 
-header .navBar {
-  height: 60px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+#mobile #hamburger {
+  font-family: "Roboto";
+  font-size: 3rem;
+  color: #E5B80B;
+  margin: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
-header .navBar ul {
+#mobile #hamburger:hover {
+  cursor: pointer;
+}
+
+#mobile #navDropdown {
+  display: none;
+  width: 100vw;
+  flex-direction: column;
+  min-height: 170px;
+}
+
+#mobile #navDropdown ul {
   list-style-type: none;
+}
+
+#mobile #navDropdown ul li {
+  flex-grow: 1;
+  margin: 10px 20px;
+}
+
+#mobile #navDropdown ul li a {
+  color: #E5B80B;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+}
+
+#mobile #navDropdown ul li a:hover {
+  color: white;
+  font-weight: bold;
+}
+
+#mobile #logo {
   display: flex;
-  justify-content: center;
+  flex-grow: 1;
+  justify-content: right;
+}
+
+#mobile #logo a {
+  margin: 20px;
+}
+
+@media (min-width: 992px) {
+  #mobile {
+    display: none;
+  }
+  #desktop {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    z-index: 10000;
+  }
+  #desktop #navBar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-grow: 2;
+  }
+  #desktop #navBar ul {
+    list-style-type: none;
+  }
+  #desktop #navBar ul li {
+    display: inline-flex;
+    margin: 0 20px;
+  }
+  #desktop #navBar ul li a {
+    color: #E5B80B;
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    text-decoration: none;
+  }
+  #desktop #navBar ul li a:hover {
+    color: white;
+    font-weight: bold;
+  }
+  #desktop #logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-grow: 1;
+  }
+  #desktop #logo h2 {
+    color: #E5B80B;
+    font-size: 1.5rem;
+    font-family: "Roboto";
+  }
+  #desktop #logo img {
+    width: 62px;
+  }
+}
+#topHeading {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #343434;
+  min-height: 460px;
+  display: flex;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-header .navBar ul li {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  flex-direction: column;
-}
-
-header .navBar ul li a {
-  display: block;
+#topHeading h1,
+#topHeading p {
+  color: #E5B80B;
+  font-family: "Roboto";
   text-align: center;
-  line-height: 2;
+  line-height: 1.5;
+  text-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+#topHeading h1 {
+  font-size: 5rem;
+}
+
+#topHeading p {
   font-size: 1.5rem;
-  font-family: "Roboto";
-  text-decoration: none;
-  color: #E5B80B;
-  border: 1px solid #000;
-  background-color: black;
 }
 
-header .navBar ul li a:hover {
-  color: white;
-}
-
-header .navBar ul li ul {
-  display: none;
-}
-
-header .navBar ul li:hover ul {
+#tools {
+  width: 100vw;
+  max-width: 100%;
   display: flex;
-}
-
-header section {
-  display: flex;
-  flex-grow: 1;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: center;
+  background-color: white;
+  box-shadow: inset 0px -3px 6px rgba(0, 0, 0, 0.1607843137);
+  padding: 15px 0;
+  gap: 0 20px;
+  flex-wrap: wrap;
 }
 
-header section h2 {
+#aboutMe {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100vw;
+  max-width: 100%;
+  min-height: 715px;
+  background-color: white;
+  padding: 20px 5px;
+}
+
+#aboutMe img {
+  width: 140px;
+}
+
+#aboutMe h2 {
+  font-family: "Roboto";
+  font-size: 3rem;
+  color: #E5B80B;
+  text-align: center;
+}
+
+#aboutMe p {
   font-family: "Roboto";
   font-size: 1.5rem;
-  color: #E5B80B;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 10px;
 }
 
-header section img[alt=Logo] {
-  padding: 10px 20px;
+#aboutMe a {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: black;
+  color: #E5B80B;
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 25px;
+  transition: all 0.7s;
+}
+
+#aboutMe a:hover {
+  background: #343434;
+  color: white;
+  transform: scale(1.1);
+}
+
+@media (min-width: 992px) {
+  #aboutMe p {
+    width: 50%;
+  }
+}
+@media (min-width: 1920px) {
+  #aboutMe p {
+    width: 33%;
+  }
+}
+#projects {
+  width: 100vw;
+  max-width: 100%;
+  background-color: #343434;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 100px 0;
+}
+
+#projects > h2 {
+  color: #E5B80B;
+  font-family: "Roboto";
+  font-size: 3rem;
+  text-align: center;
+}
+
+#projects > .projectsType {
+  padding-top: 50px;
+}
+
+#projects > p {
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+#projects .pCards {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px 0;
+}
+
+#projects .pCards section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 90%;
+  padding-bottom: 20px;
+  transition: all 0.7s;
+}
+
+#projects .pCards section:hover {
+  transform: scale(1.1);
+}
+
+#projects .pCards section img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 200px;
+}
+
+#projects .pCards section h3 {
+  color: #E5B80B;
+  font-family: "Roboto";
+  font-size: 2rem;
+  text-align: center;
+}
+
+#projects .pCards section p {
+  text-align: center;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+}
+
+#projects .pCards section a {
+  display: block;
+  background-color: black;
+  color: #E5B80B;
+  text-decoration: none;
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 5px 15px;
+  border-radius: 20px;
+  transition: all 0.7s;
+}
+
+#projects .pCards section:hover a {
+  background: #343434;
+  color: white;
+  transform: scale(1.1);
+}
+
+@media (min-width: 350px) {
+  #projects .pCards section {
+    width: 340px;
+  }
+}
+@media (min-width: 992px) {
+  #projects {
+    width: 100vw;
+    max-width: 100%;
+    background-color: #343434;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 15px;
+    padding: 100px 0;
+  }
+  #projects > h2 {
+    color: #E5B80B;
+    font-family: "Roboto";
+    font-size: 3rem;
+    text-align: center;
+  }
+  #projects > .projectsType {
+    padding-top: 50px;
+  }
+  #projects > p {
+    color: white;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  #projects .pCards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px 0;
+    width: 50%;
+  }
+  #projects .pCards section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    width: 350px;
+    padding-bottom: 20px;
+  }
+  #projects .pCards section img {
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+  }
+  #projects .pCards section h3 {
+    color: #E5B80B;
+    font-family: "Roboto";
+    font-size: 2rem;
+    text-align: center;
+  }
+  #projects .pCards section p {
+    text-align: center;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+  }
+  #projects .pCards section a {
+    display: block;
+    background-color: black;
+    color: #E5B80B;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 15px;
+    border-radius: 20px;
+  }
+}
+#contactMe {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+}
+
+#contactMe #formContainer {
+  width: 70%;
+}
+
+#contactMe #formContainer h2 {
+  font-family: "Roboto";
+  color: #E5B80B;
+  font-size: 3rem;
+}
+
+#contactMe #formContainer p {
+  font-family: "Roboto";
+  color: #E5B80B;
+  font-size: 1.5rem;
+}
+
+#contactMe #formContainer form {
+  padding-top: 20px;
+}
+
+#contactMe #formContainer form label {
+  font-family: "Roboto";
+  color: #E5B80B;
+  font-size: 1.5rem;
+}
+
+#contactMe #formContainer form input {
+  font-size: 1.5rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 7px solid #343434;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#contactMe #formContainer form textarea {
+  font-size: 1.5rem;
+  width: 100%;
+  border: 0;
+  border-bottom: 7px solid #343434;
+  resize: none;
+  padding: 5px;
+}
+
+#contactMe #formContainer form #formBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #E5B80B;
+  background: #343434;
+  border: 0;
+  border-radius: 20px;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  width: 20%;
+  height: 40px;
+}
+
+#contactMe #formContainer form #formBtn:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  #contactMe #formContainer form input {
+    max-width: 550px;
+  }
+  #contactMe #formContainer form textarea {
+    max-width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  #contactMe #formContainer {
+    width: 50%;
+  }
+  #contactMe #formContainer form #formBtn {
+    height: 50px;
+    max-width: 166px;
+  }
+}
+#socials {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 10px;
+  background-color: #E5B80B;
+  flex-wrap: wrap;
+}
+
+.socialBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (min-width: 992px) {
+  #socials {
+    padding: 50px;
+    gap: 150px;
+  }
+}
+#footer {
+  width: 100vw;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  padding: 20px;
+}
+
+#footer > h3 {
+  color: #E5B80B;
+  font-family: "Roboto";
+  font-size: 2rem;
 }/*# sourceMappingURL=main.css.map */

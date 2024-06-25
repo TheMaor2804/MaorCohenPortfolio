@@ -5,41 +5,173 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Maor Cohen</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="style/main.css">
 </head>
 
 <body>
-    <header>
-        <nav class="navBar">
+    <header id="mobile">
+        <span id="hamburger">&#9776;</span>
+        <section id="logo">
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
+        </section>
+        <nav id="navDropdown">
             <ul>
                 <li><a href="index.html">Home Page</a></li>
-                <li><a href="">Projects</a>
-                    <ul>
-                        <li> <a href="">Landing Pages</a>
-                            <ul>
-                                <li><a href="#">Project1</a></li>
-                                <li><a href="#">Project2</a></li>
-                                <li><a href="#">Project3</a></li>
-                                <li><a href="#">Project4</a></li>
-                                <li><a href="#">Project5</a></li>
-                                <li><a href="#">Project6</a></li>
-                            </ul>
-                        </li>
-                    </ul>
+                <li><a href="index.html#aboutMe">About Me</a></li>
+                <li><a href="index.html#projects">Services</a></li>
+                <li><a href="index.html#contactMe">Contact Me</a></li>
                 </li>
-                <li><a href="index.html#about">About Me</a></li>
-                <li><a href="index.html#services">Services</a></li>
-                <li><a href="index.html#contact">Contact Me</a></li>
             </ul>
         </nav>
-        <section>
+    </header>
+
+    <header id="desktop">
+        <nav id="navBar">
+            <ul>
+                <li><a href="index.html">Home Page</a></li>
+                <li><a href="index.html#aboutMe">About Me</a></li>
+                <li><a href="index.html#projects">Services</a></li>
+                <li><a href="index.html#contactMe">Contact Me</a></li>
+            </ul>
+        </nav>
+        <section id="logo">
             <h2>Maor Cohen</h2>
-            <img src="images/logo.png" alt="Logo">
-        </section>
-        <section>
-            <h2></h2>
+            <a href="index.html"><img src="images/logo.png" alt="Logo"></a>
         </section>
     </header>
+
+    <section id="topHeading">
+        <h1>Portfolio</h1>
+        <p>
+            I'm always looking for new challenges,<br>
+            Contact me today to discuss your vision!
+        </p>
+    </section>
+
+    <div id="tools">
+        <img src="images/img-HTML.png" alt="HTML">
+        <img src="images/img-CSS.png" alt="CSS">
+        <img src="images/img-Bootstrap.png" alt="Bootstrap">
+        <img src="images/img-SASS.png" alt="Sass">
+        <img src="images/img-JS.png" alt="JavaScript">
+        <img src="images/img-OOP.png" alt="OOP">
+        <img src="images/img-ES6.png" alt="ES6">
+        <img src="images/img-TypeScript.png" alt="TypeScript">
+        <img src="images/img-API.png" alt="API">
+        <img src="images/img-React.png" alt="React">
+        <img src="images/img-NodeJS.png" alt="NodeJS">
+    </div>
+
+    <section id="aboutMe">
+        <img src="images/profile-image.png" alt="Me">
+        <h2>About Me</h2>
+        <p>My journey to full-stack development is an ongoing learning adventure. I have always been attracted to the
+            world of
+            programming, therefore my passion led me to the HackerU College where I took on the Full Stack Web
+            Development course.
+            That marked the official start of my journey to full-stack development. I'm always trying to push the
+            boundaries of
+            what can be done when programming, and I'm passionate about learning more tools, and technologies which will
+            help me produce the best
+            of my abilities.</p>
+        <a id='cvDownload' href="#">Download My Resume Now!</a>
+    </section>
+    <div id="projects">
+        <h2>Selected Works</h2>
+        <p>Get a glimpse of my capabilities from the following projects</p>
+        <h2 class="projectsType">Landing Pages</h2>
+        <div class="pCards">
+            <section>
+                <img src="projects/Landing Pages/project1/images/screenshot.jpg" alt="Landing Page 1">
+                <h3>Landing Page 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, tempora.</p>
+                <a href="projects/Landing Pages/project1/display.html">Project Page</a>
+            </section>
+            <section>
+                <img src="projects/Landing Pages/project2/images/screenshot.jpg" alt="Landing Page 2">
+                <h3>Landing Page 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, tempora.</p>
+                <a href="projects/Landing Pages/project2/display.html">Project Page</a>
+            </section>
+            <section>
+                <img src="projects/Landing Pages/project3/images/screenshot.jpg" alt="Landing Page 3">
+                <h3>Landing Page 3</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, tempora.</p>
+                <a href="projects/Landing Pages/project3/display.html">Project Page</a>
+            </section>
+            <section>
+                <img src="projects/Landing Pages/project4/images/screenshot.jpg" alt="Landing Page 4">
+                <h3>Landing Page 4</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, tempora.</p>
+                <a href="projects/Landing Pages/project4/display.html">Project Page</a>
+            </section>
+            <section>
+                <img src="projects/Landing Pages/project5/images/screenshot.jpg" alt="Landing Page 5">
+                <h3>Landing Page 5</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, tempora.</p>
+                <a href="projects/Landing Pages/project5/display.html">Project Page</a>
+            </section>
+            <section>
+                <img src="projects/Landing Pages/project6/images/screenshot.jpg" alt="Landing Page 6">
+                <h3>Landing Page 6</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus, tempora.</p>
+                <a href="projects/Landing Pages/project6/display.html">Project Page</a>
+            </section>
+        </div>
+    </div>
+
+    <div id="contactMe">
+        <div id="formContainer">
+            <h2>Contact Me</h2>
+            <p>Fill your details and click send to contact me!</p>
+            <form action="">
+                <label>Full Name:</label><br>
+                <input type="text" required><br>
+                <label>Email:</label><br>
+                <input type="email" required><br>
+                <label>Phone Number:</label><br>
+                <input type="tel" required><br>
+                <label>Message:</label><br>
+                <textarea required></textarea><br>
+                <input type="submit" id="formBtn" value="Send"></input>
+            </form>
+        </div>
+    </div>
+
+    <div id="socials">
+        <div class="socialBox">
+            <img src="images/Icon material-location-on.svg" alt="Location">
+            <p>Yavne</p>
+        </div>
+        <div class="socialBox">
+            <img src="images/Icon simple-email.svg" alt="Email">
+            <p>MaorC2804@gmail.com</p>
+        </div>
+        <div class="socialBox">
+            <img src="images/Icon simple-whatsapp.svg" alt="Whatsapp">
+            <p>0525959758</p>
+        </div>
+        <div class="socialBox">
+            <img src="images/Icon simple-whatsapp-1.svg" alt="Phone">
+            <p>0525959758</p>
+        </div>
+        <div class="socialBox">
+            <img src="images/Icon awesome-linkedin-in.svg" alt="LinkedIn">
+            <p>Maor Cohen</p>
+        </div>
+        <div class="socialBox">
+            <img src="images/Icon awesome-facebook-f.svg" alt="Facebook">
+            <p>#Maor_Cohen</p>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <h3>Maor Cohen</h3>
+        <h3>All rights reserved</h3>
+    </footer>
+
+    <script src="javascript/main.js"></script>
+
 </body>
 
 </html>

@@ -1,0 +1,29 @@
+#topHeading {
+    width: 100vw;
+    max-width: 100%;
+    background-color: $secondaryBgc;
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#topHeading h1,
+#topHeading p {
+    color: $mainColor;
+    font-family: $fontF;
+    text-align: center;
+    line-height: 1.5;
+    text-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+#topHeading h1 {
+    font-size: $h1FontSize;
+}
+
+#topHeading p {
+    font-size: $pFontSize;
+}

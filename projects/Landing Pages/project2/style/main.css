@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    background: transparent linear-gradient(180deg, #281eff 0%, #2dff8c 100%) 0% 0% no-repeat padding-box;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.title {
+    font: normal normal normal 160px/231px Satisfy;
+    color: #ffffff;
+    text-shadow: 0px 0px 36px #00000087;
+}
+
+.subtitle {
+    font: normal normal normal 32px/38px Varela Round;
+    color: #ffffff;
+}
+
+.text {
+    font: normal normal normal 16px/20px Varela Round;
+    color: #f9f9f9;
+}
+
+form {
+    display: flex;
+    width: 100vw;
+    gap: 37.5px;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+label {
+    font: normal normal normal 16px/20px Varela Round;
+    letter-spacing: 0px;
+    color: #f9f9f9;
+}
+
+input {
+    width: 418px;
+    height: 50px;
+    /* UI Properties */
+    background: #f6f6f624 0% 0% no-repeat padding-box;
+    border: 2px solid #ffffff;
+}
+
+button {
+    width: 206px;
+    height: 50px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    margin-left: -15px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (max-width: 1200px) {
+    form {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title {
+        font: normal normal normal 60px/86px Satisfy;
+    }
+
+    .subtitle {
+        font: normal normal normal 18px/22px Varela Round;
+    }
+
+    .text {
+        font: normal normal normal 16px/20px Varela Round;
+    }
+
+    input {
+        width: 60vw;
+    }
+
+    button {
+        width: 60vw;
+        margin: 0;
+    }
+
+    .text {
+        width: 60vw;
+        text-align: center;
+    }
+}
+
+@media (max-width:760px) {
+    input {
+        width: 80vw;
+    }
+
+    button {
+        width: 80vw;
+        margin: 0;
+    }
+
+    .text {
+        width: 80vw;
+        text-align: center;
+    }
+}

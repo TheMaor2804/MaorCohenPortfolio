@@ -1,0 +1,67 @@
+#aboutMe {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100vw;
+    max-width: 100%;
+    min-height: 715px;
+    background-color: white;
+    padding: 20px 5px;
+}
+
+#aboutMe img {
+    width: 140px;
+}
+
+
+#aboutMe h2 {
+    font-family: $fontF;
+    font-size: $h2FontSize;
+    color: $mainColor;
+    text-align: center;
+}
+
+
+#aboutMe p {
+    font-family: $fontF;
+    font-size: $pFontSize;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+
+#aboutMe a {
+    font-family: $fontF;
+    font-size: $pFontSize;
+    text-decoration: none;
+    background: $mainBgc;
+    color: $mainColor;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: all 0.7s;
+}
+
+
+#aboutMe a:hover {
+    background: $secondaryBgc;
+    color: $secondaryColor;
+    transform: scale(1.1);
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #aboutMe p {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1920px) {
+    #aboutMe p {
+        width: 33%;
+    }
+}

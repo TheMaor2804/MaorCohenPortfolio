@@ -1,0 +1,26 @@
+#socials {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 10px;
+    background-color: $mainColor;
+    flex-wrap: wrap;
+}
+
+.socialBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 992px) {
+    #socials {
+        padding: 50px;
+        gap: 150px;
+    }
+}

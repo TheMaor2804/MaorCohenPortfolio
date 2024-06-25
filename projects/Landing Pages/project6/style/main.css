@@ -1,0 +1,240 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.topBar {
+    width: 100vw;
+    max-width: 100%;
+    height: 18px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topBar>div {
+    display: flex;
+    width: 20%;
+    height: 100%;
+    background-color: #FDBD03;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 95px;
+    height: 95px;
+    background-color: #FDBD03;
+    border-radius: 50%;
+    margin-left: 65px;
+    margin-top: 50px;
+}
+
+.icons>img {
+    height: 50%;
+    width: 50%;
+}
+
+.mainContainer {
+    display: flex;
+    width: 100vw;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding: 100px 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 40vw;
+    gap: 15px;
+    padding-right: 100px;
+}
+
+.imgContainer {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.imgContainer>img {
+    width: 50%;
+}
+
+.title {
+    text-align: left;
+    font: normal normal 900 66px/97px Heebo;
+    letter-spacing: 0px;
+    color: #FDBD03;
+}
+
+.text {
+    text-align: left;
+    font: normal normal normal 20px/29px Heebo;
+    letter-spacing: 0px;
+    color: #020253;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.formGroup {
+    display: flex;
+    gap: 20px;
+}
+
+.formControl {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.formAreaControl {
+    display: inline-flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+label {
+    text-align: left;
+    font: normal normal bold 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #2C2C2C;
+}
+
+input {
+    width: 100%;
+    height: 50px;
+    border: 0;
+    border-bottom: 4px solid #FDBD03;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    padding: 10px;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    height: 143px;
+    border: 0;
+    border-bottom: 4px solid #FDBD03;
+    background: #E5EEFF 0% 0% no-repeat padding-box;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+button {
+    width: 30%;
+    height: 50px;
+    background: #FDBD03 0% 0% no-repeat padding-box;
+    text-align: center;
+    font: normal normal bold 22px/30px Heebo;
+    letter-spacing: 0.33px;
+    color: #000000;
+    border: 0;
+}
+
+.iconsHolder {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50vw;
+}
+
+.bottomBar {
+    width: 100vw;
+    max-width: 100%;
+    height: 18px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+}
+
+.bottomBar>div {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-color: #FDBD03;
+}
+
+@media (max-width:1000px) {
+    #whatsapp {
+        display: none;
+    }
+
+    .topBar>div {
+        width: 80vw;
+    }
+
+    .bottomBar>div {
+        width: 100vw;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+    }
+
+    .imgContainer {
+        justify-content: center;
+    }
+
+    .container {
+        width: 80vw;
+        padding: 0;
+    }
+
+    .iconsHolder {
+        width: 100vw;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .icons {
+        width: 45px;
+        height: 45px;
+        margin: 0;
+    }
+
+    .title {
+        width: 100%;
+        text-align: center;
+        font: normal normal 900 40px/59px Heebo;
+        line-height: 1;
+        padding-bottom: 10px;
+    }
+
+    .text {
+        width: 100%;
+        text-align: center;
+        font: normal normal normal 15px/22px Heebo;
+    }
+
+    label {
+        font: normal normal bold 10px/14px Heebo;
+    }
+
+    button {
+        font: normal normal bold 15px/21px Heebo;
+    }
+
+    form {
+        padding-top: 35px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .mainContainer {
+        padding: 50px 0;
+    }
+}

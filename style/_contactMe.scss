@@ -1,0 +1,95 @@
+#contactMe {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $mainBgc;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 0;
+}
+
+#contactMe #formContainer {
+    width: 70%;
+}
+
+#contactMe #formContainer h2 {
+    font-family: $fontF;
+    color: $mainColor;
+    font-size: $h2FontSize;
+}
+
+#contactMe #formContainer p {
+    font-family: $fontF;
+    color: $mainColor;
+    font-size: $pFontSize;
+}
+
+#contactMe #formContainer form {
+    padding-top: 20px;
+}
+
+#contactMe #formContainer form label {
+    font-family: $fontF;
+    color: $mainColor;
+    font-size: $pFontSize;
+}
+
+#contactMe #formContainer form input {
+    font-size: $pFontSize;
+    width: 100%;
+    border: 0;
+    border-bottom: 7px solid $secondaryBgc;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+#contactMe #formContainer form textarea {
+    font-size: $pFontSize;
+    width: 100%;
+    border: 0;
+    border-bottom: 7px solid $secondaryBgc;
+    resize: none;
+    padding: 5px;
+}
+
+#contactMe #formContainer form #formBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $mainColor;
+    background: $secondaryBgc;
+    border: 0;
+    border-radius: 20px;
+    font-size: $pFontSize;
+    margin-top: 20px;
+    width: 20%;
+    height: 40px;
+}
+
+#contactMe #formContainer form #formBtn:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 600px) {
+    #contactMe #formContainer form input {
+        max-width: 550px;
+    }
+
+    #contactMe #formContainer form textarea {
+        max-width: 550px;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #contactMe #formContainer {
+        width: 50%;
+    }
+
+    #contactMe #formContainer form #formBtn {
+        height: 50px;
+        max-width: 166px;
+    }
+}

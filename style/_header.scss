@@ -1,79 +1,145 @@
-$fontSize: 1.5rem;
-
-header {
-    display: flex;
-    width: 100vw;
-    background-color: $mainBgc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+body {
+    padding-top: 50px;
 }
 
-header .navBar {
-    height: 60px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-header .navBar ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-header .navBar ul li {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-
-header .navBar ul li a {
-
-    display: block;
-    text-align: center;
-    line-height: 2;
-    font-size: $fontSize;
-    font-family: $fontF;
-    text-decoration: none;
-    color: $mainColor;
-    border: 1px solid #000;
-    background-color: $mainBgc;
-}
-
-header .navBar ul li a:hover {
-
-    color: $secondaryColor;
-}
-
-header .navBar ul li ul {
+#desktop {
     display: none;
 }
 
-header .navBar ul li:hover ul {
+#mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100%;
+    background-color: $mainBgc;
+    flex-wrap: wrap;
+    transition: all 0.5s ease-in-out;
+    z-index: 10000;
 }
 
-header section {
+#mobile #hamburger {
+    font-family: $fontF;
+    font-size: 3rem;
+    color: $mainColor;
+    margin: 20px;
+    user-select: none; //no selecting with mouse
+    -webkit-tap-highlight-color: transparent; //no highlight in mobile
+}
+
+#mobile #hamburger:hover {
+    cursor: pointer;
+}
+
+#mobile #navDropdown {
+    display: none;
+    width: 100vw;
+    flex-direction: column;
+    min-height: 170px;
+}
+
+
+
+#mobile #navDropdown ul {
+    list-style-type: none;
+}
+
+#mobile #navDropdown ul li {
+    flex-grow: 1;
+    margin: 10px 20px;
+}
+
+
+#mobile #navDropdown ul li a {
+    color: $mainColor;
+    text-decoration: none;
+    font-family: $fontF;
+    font-size: 1.5rem;
+}
+
+#mobile #navDropdown ul li a:hover {
+    color: $secondaryColor;
+    font-weight: bold;
+}
+
+#mobile #logo {
     display: flex;
     flex-grow: 1;
-    justify-content: flex-end;
-    align-items: center;
+    justify-content: right;
 }
 
-header section h2 {
-    font-family: $fontF;
-    font-size: $fontSize;
-    color: $mainColor;
+#mobile #logo a {
+    margin: 20px;
 }
 
-header section img[alt=Logo] {
-    // width: 100px;
-    padding: 10px 20px;
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100vw;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        background-color: $mainBgc;
+        z-index: 10000;
+    }
+
+    #desktop #navBar {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-grow: 2;
+    }
+
+    #desktop #navBar ul {
+        list-style-type: none;
+
+    }
+
+    #desktop #navBar ul li {
+        display: inline-flex;
+        margin: 0 20px;
+    }
+
+    #desktop #navBar ul li a {
+        color: $mainColor;
+        font-size: $pFontSize;
+        font-family: $fontF;
+        text-decoration: none;
+    }
+
+    #desktop #navBar ul li a:hover {
+        color: $secondaryColor;
+        font-weight: bold;
+    }
+
+    #desktop #logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-grow: 1;
+    }
+
+    #desktop #logo h2 {
+        color: $mainColor;
+        font-size: $pFontSize;
+        font-family: $fontF;
+    }
+
+    #desktop #logo img {
+        width: 62px;
+    }
 }
