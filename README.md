@@ -1,20 +1,32 @@
-Maor Cohen's Portfolio
+#  Maor Cohen's Portfolio
 
-This repository contains the source code for my personal portfolio website, built with HTML, CSS ,Sass, Bootstrap, and a touch of JavaScript.
+This repository contains the source code for my personal portfolio website.
 
-About the Website
+##  Technologies Used
 
-This website serves as an online space to showcase my skills and experience. It features:
+    HTML5
+    CSS3
+    SASS
+    Bootstrap
+    JavaScript
 
-    A brief introduction about myself and my career goals.
-    A section highlighting my key skills and technologies I'm proficient in.
-    Information on my projects, with descriptions and relevant links.
-    Contact options for potential employers or collaborators.
+##  Website Overview
 
-Technologies Used
+This portfolio website is designed to provide potential employers and customers with an overview of my capabilities. It features the following sections:
 
-    Frontend:
-        HTML5
-        CSS3 (SASS preprocessor)
-        Bootstrap
-        JavaScript (minimal)
+    About Me: A brief introduction highlighting your skills and experience.
+    Projects: A section showcasing your past projects with clickable cards that lead to dedicated project pages.
+    Contact: A contact form for potential employers and clients to reach out.
+    JavaScript Features: ( Briefly describe what the JavaScript is used for in your portfolio. Ex: Animations, form validation, etc.)
+
+##  Getting Started
+
+This project requires no setup to view the live portfolio.
+
+##  Contributing
+
+This portfolio website is currently not set up for external contributions.
+
+##  Contact
+
+Feel free to reach out through the contact form on this website or by email at MaorC2804@gmail.com.
