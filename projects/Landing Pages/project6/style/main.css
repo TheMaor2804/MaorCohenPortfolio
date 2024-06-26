@@ -118,7 +118,8 @@ input {
     border: 0;
     border-bottom: 4px solid #FDBD03;
     background: #E5EEFF 0% 0% no-repeat padding-box;
-    padding: 10px;
+    padding: 0 10px;
+
 }
 
 textarea {

@@ -73,6 +73,7 @@
     border-bottom: 4px solid #020253;
     width: 20vw;
     height: 50px;
+    padding: 0 10px;
 }
 
 .formControlSubmit>input {

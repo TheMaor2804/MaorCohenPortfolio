@@ -67,6 +67,7 @@
     text-align: left;
     font-family: Heebo;
     margin-bottom: 20px;
+    padding: 0 10px;
 }
 
 .formContainer form #sendBtn {
