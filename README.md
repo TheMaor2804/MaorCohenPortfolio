@@ -5,7 +5,7 @@ This repository contains the source code for my personal portfolio website.
 ##  Technologies Used
 
     HTML5
-    CSS3
+    CSS
     SASS
     Bootstrap
     JavaScript
