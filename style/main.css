@@ -85,6 +85,10 @@ body {
   margin: 20px;
 }
 
+#mobile #logo a img {
+  height: 62px;
+}
+
 @media (min-width: 992px) {
   #mobile {
     display: none;
@@ -138,8 +142,8 @@ body {
     font-size: 1.5rem;
     font-family: "Roboto";
   }
-  #desktop #logo img {
-    width: 62px;
+  #desktop #logo a img {
+    height: 62px;
   }
 }
 #topHeading {
@@ -200,7 +204,8 @@ body {
 }
 
 #aboutMe img {
-  width: 140px;
+  max-width: 140px;
+  margin-bottom: 20px;
 }
 
 #aboutMe h2 {
@@ -239,6 +244,10 @@ body {
 @media (min-width: 992px) {
   #aboutMe p {
     width: 50%;
+  }
+  #aboutMe img {
+    max-width: 280px;
+    height: 100px;
   }
 }
 @media (min-width: 1920px) {

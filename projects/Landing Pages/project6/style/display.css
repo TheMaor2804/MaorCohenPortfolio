@@ -74,6 +74,10 @@
     margin: 20px;
 }
 
+#logo a img {
+    height: 62px;
+}
+
 #logo a {
     text-decoration: none;
 }
@@ -234,9 +238,6 @@
         font-family: "Roboto";
     }
 
-    #desktop #logo img {
-        width: 62px;
-    }
 
     .screenshot {
         padding: 200px 0;

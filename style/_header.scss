@@ -75,6 +75,10 @@ body {
     margin: 20px;
 }
 
+#mobile #logo a img {
+    height: 62px;
+}
+
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
 
@@ -141,7 +145,7 @@ body {
         font-family: $fontF;
     }
 
-    #desktop #logo img {
-        width: 62px;
+    #desktop #logo a img {
+        height: 62px;
     }
 }
