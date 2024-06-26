@@ -17,7 +17,6 @@ This portfolio website is designed to provide potential employers and customers 
     About Me: A brief introduction highlighting your skills and experience.
     Projects: A section showcasing your past projects with clickable cards that lead to dedicated project pages.
     Contact: A contact form for potential employers and clients to reach out.
-    JavaScript Features: ( Briefly describe what the JavaScript is used for in your portfolio. Ex: Animations, form validation, etc.)
 
 ##  Getting Started
 
