@@ -13,8 +13,8 @@
 }
 
 #aboutMe img {
-    height: 140px;
-    margin-bottom: 20px;
+    max-width: 60%;
+    margin-bottom: 50px;
 }
 
 
@@ -59,10 +59,18 @@
     #aboutMe p {
         width: 50%;
     }
+
+    #aboutMe img {
+        max-width: 40%;
+    }
 }
 
 @media (min-width: 1920px) {
     #aboutMe p {
         width: 33%;
+    }
+
+    #aboutMe img {
+        max-width: 20%;
     }
 }
