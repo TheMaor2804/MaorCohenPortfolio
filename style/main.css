@@ -565,5 +565,11 @@ body {
 #footer > h3 {
   color: #E5B80B;
   font-family: "Roboto";
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  #footer > h3 {
+    font-size: 2rem;
+  }
 }/*# sourceMappingURL=main.css.map */

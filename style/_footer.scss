@@ -11,5 +11,11 @@
 #footer>h3 {
     color: $mainColor;
     font-family: $fontF;
-    font-size: $h3FontSize;
+    font-size: $pFontSize;
+}
+
+@media (min-width: 992px) {
+    #footer>h3 {
+        font-size: $h3FontSize;
+    }
 }
