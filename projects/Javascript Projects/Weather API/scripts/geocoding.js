@@ -2,7 +2,7 @@ const API_KEY = "e085f13d76158499d4b07ebef62fcbd6";
 
 export const getCitiesData = async (cityName) => {
     const response = await
-        fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`);
+        fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${API_KEY}`);
     const data = await response.json();
 
     const reStructuredData = changeCityStructure(data);

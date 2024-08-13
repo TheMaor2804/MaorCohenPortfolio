@@ -219,6 +219,7 @@ export const build = async () => {
     searchInput.value = '';
     const yavne = await getCitiesData("yavne");
 
+
     modifyDom(yavne[0]);
 }
 
