@@ -9,7 +9,7 @@ export const getCitiesData = async (cityName) => {
 
     return removeDuplicateCitiesByName(reStructuredData);
 }
-getCitiesData("yavne")
+
 
 function cityDataToName(cityData) {
     let cityName = "";
