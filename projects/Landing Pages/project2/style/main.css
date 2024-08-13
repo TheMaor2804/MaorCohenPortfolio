@@ -109,6 +109,10 @@ button {
         margin: 0;
     }
 
+    .subtitle {
+        text-align: center;
+    }
+
     .text {
         width: 80vw;
         text-align: center;

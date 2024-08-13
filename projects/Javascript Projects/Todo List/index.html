@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <Section class="intro">
+            <h1 class="title">Todo List</h1>
+            <p class="subtitle">Add your tasks to the list and keep track of them</p>
+        </Section>
+        <div class="input-div">
+            <input type="text" class="text-input">
+            <button class="add-button">Add</button>
+        </div>
+        <div class="scrollable">
+            <table class="todo-table">
+                <thead class="table-head">
+                    <tr class="header-row">
+                        <th class="table-header">Done?</th>
+                        <th class="table-header">Description</th>
+                        <th class="table-header">Creation Date</th>
+                        <th class="table-header"></th>
+                        <th class="table-header"></th>
+                    </tr>
+                </thead>
+                <tbody class="table-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>

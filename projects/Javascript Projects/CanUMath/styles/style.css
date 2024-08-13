@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+}
+
+.container {
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white;
+    background-color: #0c0fa654;
+}
+
+.title {
+    color: #58e65c;
+    font-size: 48px;
+    text-align: center;
+}
+
+.center-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    font-size: 24px;
+}
+
+#question {
+    border: 1px solid white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+#answer {
+    padding: 10px;
+    width: 100%;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    color: rgb(6, 0, 28);
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+#submit {
+    padding: 10px 20px;
+    background-color: #ffff00;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.bottom-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+}
+
+.score-p {
+    justify-self: flex-end;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width:1400px) {
+    .container {
+        width: 50%;
+        height: 70%;
+        /* gap: 15px; */
+    }
+
+    .title {
+        color: #58e65c;
+        font-size: 38px;
+    }
+}
+
+@media (max-width:800px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media (max-width:500px) {
+    .container {
+        width: 80%;
+    }
+
+    .title {
+        color: #58e65c;
+        font-size: 30px;
+    }
+}
+
+@media (max-width:350px) {
+    .container {
+        width: 80%;
+    }
+
+    .title {
+        color: #58e65c;
+        font-size: 25px;
+    }
+
+    .center-items {
+        font-size: 20px;
+    }
+
+    .bottom-items {
+        font-size: 20px;
+    }
+
+    #answer {
+        font-size: 20px;
+    }
+
+    #submit {
+        font-size: 20px;
+    }
+}

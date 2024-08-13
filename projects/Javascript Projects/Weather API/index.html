@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <title>Weather API</title>
+</head>
+
+<body>
+    <div id="errorPopup">
+        <button id="closeError">X</button>
+        <p id="errorMessage"></p>
+    </div>
+
+    <div class="wrapper">
+        <div class="search grid-item">
+            <input type="text" class="search-input main-bgc" placeholder="Search for cities" id="searchInput">
+            <ul class="suggestions">
+            </ul>
+        </div>
+        <div class="city-grid grid-item">
+            <section class="city-info">
+                <h2 id="countryName"></h2>
+                <h3 id="cityName"></h3>
+            </section>
+            <h1 id="infoDegrees"></h1>
+            <div class="info-weather-container"><img src="" alt="" id="infoWeather"></div>
+        </div>
+        <div class="display1 grid-item main-bgc">
+            <p>FORECAST FOR THE NEXT 24 HOURS</p>
+        </div>
+        <div class="display2 grid-item main-bgc">
+            <p>AIR CONDITIONS</p>
+            <div class="condition">
+                <h3>🌡 Real Feel</h3>
+                <h4 id="realFeel"></h4>
+            </div>
+            <div class="condition">
+                <h3>💨 Wind</h3>
+                <h4 id="wind"></h4>
+            </div>
+            <div class="condition">
+                <h3>💧 Rain chance</h3>
+                <h4 id="conditionsRainChance"></h4>
+            </div>
+            <div class="condition">
+                <h3>🔆 UV index</h3>
+                <h4 id="uvIndex"></h4>
+            </div>
+        </div>
+        <div class="display3 grid-item main-bgc">
+            <p>5-DAY FORECAST</p>
+            <div class="daily-forecast">
+                <p>today</p>
+                <div class="imgTitle">
+                    <img src="" alt="">
+                    <h5>Sunny</h5>
+                </div>
+                <p>max/min</p>
+            </div>
+            <div class="daily-forecast">
+                <p>today</p>
+                <div class="imgTitle">
+                    <img src="" alt="">
+                    <h5>Sunny</h5>
+                </div>
+                <p>max/min</p>
+            </div>
+            <div class="daily-forecast">
+                <p>today</p>
+                <div class="imgTitle">
+                    <img src="" alt="">
+                    <h5>Sunny</h5>
+                </div>
+                <p>max/min</p>
+            </div>
+            <div class="daily-forecast">
+                <p>today</p>
+                <div class="imgTitle">
+                    <img src="" alt="">
+                    <h5>Sunny</h5>
+                </div>
+                <p>max/min</p>
+            </div>
+            <div class="daily-forecast">
+                <p>today</p>
+                <div class="imgTitle">
+                    <img src="" alt="">
+                    <h5>Sunny</h5>
+                </div>
+                <p>max/min</p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="scripts/app.js" type="module"></script>
+</body>
+
+</html>
