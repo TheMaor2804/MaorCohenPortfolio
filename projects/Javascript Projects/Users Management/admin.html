@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/admin.css">
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="top-right-buttons">
+            <button class="logout-button">Logout</button>
+            <button class="homepage-button">Homepage</button>
+        </div>
+        <table class="Dashboard">
+            <thead class="table-head">
+                <tr class="head-row">
+                    <th class="table-headers">Name</th>
+                    <th class="table-headers">Email</th>
+                    <th class="table-headers">Role</th>
+                    <th class="table-headers">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="table-body" id="userTableBody"></tbody>
+        </table>
+    </div>
+
+    <script src="scripts/handlers/adminDashboardHandler.js" type="module"></script>
+</body>
+
+</html>

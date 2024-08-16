@@ -4,7 +4,7 @@ export default class TaskManager {
     #taskList;
 
     get taskList() {
-        return this.#taskList;
+        return [...this.#taskList];
     }
 
     constructor(taskList = []) {

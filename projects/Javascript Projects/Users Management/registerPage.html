@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/register.css">
+    <title>Register Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Register</h1>
+        <form class="register-form">
+            <label class="register-label">Name:</label>
+            <div class="name-input-holder holder">
+                <input class="register-input" type="text" id="name" name="name">
+            </div>
+
+            <label class="register-label">Email:</label>
+            <div class="email-input-holder holder">
+                <input class="register-input" type="email" id="email" name="email">
+            </div>
+
+            <label class="register-label">Password:</label>
+            <div class="password-input-holder holder">
+                <input class="register-input" type="password" id="password" name="password">
+            </div>
+
+            <label class="register-label">Confirm Password:</label>
+            <div class="confirm-password-input-holder holder">
+                <input class="register-input" type="password" id="confirmPassword" name="confirmPassword">
+            </div>
+            <button id="registerBtn">Register</button>
+            <p class="login">Already have an account? <a href="./loginPage.html">Log in</a></p>
+        </form>
+    </div>
+    <script src="./scripts/handlers/registerHandler.js" type="module"></script>
+</body>
+
+</html>
