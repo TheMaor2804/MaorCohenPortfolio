@@ -35,14 +35,15 @@
     align-items: center;
     justify-content: space-evenly;
     gap: 20px 0;
+
 }
 
 #projects .pCards section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    height: 430px;
+    justify-content: space-between;
+    min-height: 500px;
     gap: 20px;
     background-color: #fff;
     border-radius: 20px;
@@ -57,7 +58,6 @@
 #projects .pCards section img {
     border-radius: 20px 20px 0 0;
     width: 100%;
-    height: 100%
 }
 
 #projects .pCards section h3 {
@@ -145,19 +145,21 @@
     #projects .pCards section {
         display: flex;
         flex-direction: column;
+        // flex-wrap: wrap;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
         gap: 20px;
         background-color: #fff;
         border-radius: 20px;
         width: 350px;
         padding-bottom: 20px;
-
+        // max-height: 450px;
     }
 
     #projects .pCards section img {
         border-radius: 20px 20px 0 0;
-        width: 100%;
+        // width: 100%;
+        max-height: 200px;
     }
 
     #projects .pCards section h3 {
