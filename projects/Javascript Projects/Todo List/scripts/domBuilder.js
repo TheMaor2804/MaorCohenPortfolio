@@ -1,4 +1,4 @@
-
+let selectedEdit = null;
 const editTask = (descriptionCell, editButtonCell, manager, id) => {
     const input = document.createElement("input");
     input.type = "text";
@@ -11,6 +11,7 @@ const editTask = (descriptionCell, editButtonCell, manager, id) => {
 
     saveBtn.addEventListener("click", () => {
         if (input.value != "") {
+            selectedEdit = null;
             manager.modifyDescription(input.value, id);
             build(manager);
         }
@@ -55,9 +56,12 @@ export const build = (manager) => {
         })
         if (!task.isComplete) {
             editButton.addEventListener("click", () => {
+                selectedEdit = task.id;
                 editTask(descriptionCell, editButtonCell, manager, task.id);
+                build(manager);
             })
         }
+
         deleteButton.addEventListener("click", () => {
             deleteTask(manager, task.id);
         })
@@ -91,6 +95,10 @@ export const build = (manager) => {
         row.appendChild(editButtonCell);
         row.appendChild(deleteButtonCell);
         tableBody.appendChild(row);
+
+        if (selectedEdit === task.id) {
+            editTask(descriptionCell, editButtonCell, manager, task.id);
+        }
     });
 
 
