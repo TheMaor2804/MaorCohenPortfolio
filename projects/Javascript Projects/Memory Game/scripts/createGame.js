@@ -1,4 +1,4 @@
-import { Card } from "./card/Card.js";
+import { Card } from "./classes/Card.js";
 
 const menu = document.getElementById("menu");
 const cardsDiv = document.getElementById("cardsDiv")
@@ -22,7 +22,7 @@ window.addEventListener("resize", () => {
 })
 export const startGame = (difficulty) => {
     cardsArr = [];
-    Card.totalUniqueCards = 0;
+    Card.totalUniqueCards(0);
 
     let difficulties = [12, 20, 32];
     if (window.innerWidth < 800) {
@@ -100,9 +100,9 @@ const drawScreen = () => {
             return;
         }
         if (card.isFlipped) {
-            newCard.innerHTML = `<p>${card.number}</p>`;
+            newCard.style.backgroundImage = `url(images/cards/card${card.number}.jpg)`;
         } else {
-            newCard.innerHTML = "<p></p>";
+            newCard.innerHTML = "";
         }
         newCard.addEventListener("click", () => {
             handleCardClick(card);

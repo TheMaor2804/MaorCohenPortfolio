@@ -4,7 +4,7 @@ export class Card {
     #isPaired;
     static #totalUniqueCards = 0;
 
-    static set totalUniqueCards(number) {
+    static totalUniqueCards(number) {
         Card.#totalUniqueCards = number;
     }
 
