@@ -47,4 +47,4 @@ This portfolio website is currently not set up for external contributions. Feel 
 
 ## Contact
 
-Feel free to reach out through the contact form on this website or by email at MaorC2804@gmail.com.
+Feel free to reach out by email at MaorC2804@gmail.com.
