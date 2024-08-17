@@ -9,6 +9,7 @@ const storageTasks = JSON.parse(localStorage.getItem("savedTasks")) || [];
 
 const myManager = new TaskManager(storageTasks);
 
+
 addBtn.addEventListener("click", () => {
     if (input.value != "") {
         myManager.addTask(input.value);
