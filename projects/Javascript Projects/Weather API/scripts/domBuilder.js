@@ -217,9 +217,9 @@ export const build = async () => {
 
     searchBar();
     searchInput.value = '';
-    const yavne = await getCitiesData("yavne");
+    const telAviv = await getCitiesData("Tel Aviv");
 
 
-    modifyDom(yavne[0]);
+    modifyDom(telAviv[0]);
 }
 

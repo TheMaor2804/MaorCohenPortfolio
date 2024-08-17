@@ -1,5 +1,5 @@
 import { build } from "./domBuilder.js";
-import TaskManager from "./Objects/taskManager.js";
+import TaskManager from "./classes/taskManager.js";
 
 const input = document.querySelector(".text-input");
 input.value = "";

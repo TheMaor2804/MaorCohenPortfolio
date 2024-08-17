@@ -28,26 +28,13 @@ const cardsDiv = document.getElementById("cards");
 
 let isDesktop = window.innerWidth > 770;
 
-window.addEventListener('resize', () => {
 
+window.addEventListener('resize', () => {
     let tempIsDesktop = window.innerWidth > 770;
-    if (isDesktop != tempIsDesktop) {
-        isDesktop = tempIsDesktop;
-        if (!isDesktop) {
-            filter.style.display = "none";
-            filterBtn.style.display = "none";
-            resetSlider(slider, sliderHandle, sliderValue);
-            document.querySelectorAll("input").forEach((input) => {
-                if (input.type === "checkbox") {
-                    input.checked = true;
-                }
-            })
-            displayCards(searchInput);
-        }
-        else {
-            filterBtn.style.display = "block";
-        }
+    if (tempIsDesktop !== isDesktop) {
+        toggleFilter(tempIsDesktop);
     }
+
 })
 
 
@@ -102,12 +89,30 @@ applyBtn.addEventListener("click", () => {
     displayCards(searchInput);
 })
 
-
 const displayCards = (input) => {
     reset();
     cardsDiv.innerHTML = "";
     search(input.value.trim())
     createCardList();
+}
+
+const toggleFilter = (bool) => {
+    console.log(bool);
+
+    isDesktop = bool;
+    if (!isDesktop) {
+        filter.style.display = "none";
+        filterBtn.style.display = "none";
+        resetSlider(slider, sliderHandle, sliderValue);
+        document.querySelectorAll("input").forEach((input) => {
+            if (input.type === "checkbox") {
+                input.checked = true;
+            }
+        })
+        displayCards(searchInput);
+    } else {
+        filterBtn.style.display = "block";
+    }
 }
 
 
@@ -232,3 +237,5 @@ export const createCardList = () => {
         createCard(country);
     }
 }
+
+toggleFilter(isDesktop);

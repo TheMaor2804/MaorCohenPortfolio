@@ -1,0 +1,275 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* background-color: #343434; */
+}
+
+#desktop {
+    display: none;
+}
+
+#mobile {
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    max-width: 100%;
+    background-color: black;
+    flex-wrap: wrap;
+}
+
+#mobile #hamburger {
+    font-family: "Roboto";
+    font-size: 3rem;
+    color: #E5B80B;
+    margin: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#mobile #hamburger:hover {
+    cursor: pointer;
+}
+
+#mobile #navDropdown {
+    display: none;
+    width: 100vw;
+    flex-direction: column;
+    min-height: 170px;
+}
+
+#mobile #navDropdown ul {
+    list-style-type: none;
+}
+
+#mobile #navDropdown ul li {
+    flex-grow: 1;
+    margin: 10px 20px;
+}
+
+#mobile #navDropdown ul li a {
+    color: #E5B80B;
+    text-decoration: none;
+    font-family: "Roboto";
+    font-size: 1.5rem;
+}
+
+#mobile #navDropdown ul li a:hover {
+    color: white;
+    font-weight: bold;
+}
+
+#mobile #logo {
+    display: flex;
+    flex-grow: 1;
+    justify-content: right;
+}
+
+#mobile #logo a {
+    margin: 20px;
+}
+
+#logo a img {
+    height: 62px;
+}
+
+#logo a {
+    text-decoration: none;
+}
+
+#topHeading {
+    flex: 1;
+    background-color: #343434;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 100px 0;
+}
+
+
+.text {
+    width: 90%;
+    color: #E5B80B;
+    font-family: "Roboto";
+    text-align: center;
+    text-shadow: -4px 4px 5px rgba(0, 0, 0, 0.5);
+}
+
+#topHeading h1 {
+    font-size: 5rem;
+}
+
+#topHeading p {
+    font-size: 1.5rem;
+}
+
+#tools {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: inset 0px -3px 6px rgba(0, 0, 0, 0.1607843137);
+    padding: 15px 0;
+    gap: 0 20px;
+    flex-wrap: wrap;
+}
+
+.screenshot {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.screenshot>img {
+    display: block;
+    max-width: 100%;
+}
+
+#footer {
+    width: 100vw;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+    padding: 20px;
+}
+
+#footer>h3 {
+    color: #E5B80B;
+    font-family: Roboto;
+    font-size: 1.5rem;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.buttons>a {
+    font-family: "Roboto";
+    font-size: 1rem;
+    text-decoration: none;
+    background: black;
+    color: #E5B80B;
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 25px;
+    transition: all 0.7s;
+}
+
+.buttons>a:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+
+@media (min-width: 1656px) {
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        width: 100vw;
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        background-color: black;
+    }
+
+    #desktop #navBar {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-grow: 2;
+    }
+
+    #desktop #navBar ul {
+        list-style-type: none;
+    }
+
+    #desktop #navBar ul li {
+        display: inline-flex;
+        margin: 0 20px;
+    }
+
+    #desktop #navBar ul li a {
+        color: #E5B80B;
+        font-size: 1.5rem;
+        font-family: "Roboto";
+        text-decoration: none;
+    }
+
+    #desktop #navBar ul li a:hover {
+        color: white;
+        font-weight: bold;
+    }
+
+    #desktop #logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-grow: 1;
+    }
+
+    #desktop #logo h2 {
+        color: #E5B80B;
+        font-size: 1.5rem;
+        font-family: "Roboto";
+    }
+
+    #topHeading {
+        flex-direction: row;
+        align-self: stretch;
+    }
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: left;
+        width: 35%;
+
+    }
+
+    .buttons {
+        justify-content: flex-start;
+    }
+
+    .screenshot {
+        width: 35%;
+    }
+
+
+    #footer>h3 {
+        font-size: 2rem;
+    }
+
+}
