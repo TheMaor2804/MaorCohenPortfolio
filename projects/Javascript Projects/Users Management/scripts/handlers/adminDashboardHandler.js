@@ -1,4 +1,5 @@
 import UsersManager from "../classes/usersManager.js";
+import generateRandomUser from "../utils/generateRandomUser.js";
 import { logout } from "./logoutHandler.js";
 
 if (!JSON.parse(localStorage.getItem('loggedUser'))) {
@@ -9,6 +10,26 @@ if (!JSON.parse(localStorage.getItem('loggedUser'))) {
         window.location.href = './index.html';
     }
 
+    const removeAllButton = document.querySelector('.remove-all');
+    const generateUsersButton = document.querySelector('.generate-users');
+
+    const storedList = JSON.parse(localStorage.getItem('usersList')) || [];
+
+    const userManager = new UsersManager(storedList);
+
+    removeAllButton.addEventListener('click', () => {
+        userManager.removeAll();
+        location.reload();
+    });
+
+    generateUsersButton.addEventListener('click', () => {
+        for (let i = 0; i < 10; i++) {
+            const randomUser = generateRandomUser();
+            userManager.addUser(randomUser.name, randomUser.email, randomUser.password);
+        }
+        location.reload();
+    });
+
     const logoutButton = document.querySelector('.logout-button');
     const homepageButton = document.querySelector('.homepage-button');
 
@@ -17,10 +38,6 @@ if (!JSON.parse(localStorage.getItem('loggedUser'))) {
     homepageButton.addEventListener('click', () => {
         window.location.href = './index.html';
     });
-
-    const storedList = JSON.parse(localStorage.getItem('usersList')) || [];
-
-    const userManager = new UsersManager(storedList);
 
     // Retrieve user list from the usersManager object
     const userList = userManager.usersList;

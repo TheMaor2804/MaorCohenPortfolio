@@ -13,6 +13,7 @@ const usersManager = new UsersManager(usersList);
 
 if (usersManager.findUser("admin") === null) {
     addAdminUser("Admin", "admin", "admin");
+    location.reload();
 }
 
 localStorage.setItem("loggedUser", null);

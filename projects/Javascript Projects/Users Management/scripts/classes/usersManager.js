@@ -31,6 +31,10 @@ export default class UsersManager {
         this.#usersList = [...newList];
         this.saveUsersList();
     }
+    removeAll() {
+        this.#usersList = [];
+        this.saveUsersList();
+    }
     validateEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let emailExist = false;
