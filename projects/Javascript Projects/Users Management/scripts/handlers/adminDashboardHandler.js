@@ -2,11 +2,13 @@ import UsersManager from "../classes/usersManager.js";
 import generateRandomUser from "../utils/generateRandomUser.js";
 import { logout } from "./logoutHandler.js";
 
-if (!JSON.parse(localStorage.getItem('loggedUser'))) {
+const loggedUser = JSON.parse(localStorage.getItem('loggedUser'));
+
+if (!loggedUser) {
     window.location.href = './loginPage.html';
 } else {
 
-    if (JSON.parse(localStorage.getItem('loggedUser')).isAdmin === false) {
+    if (loggedUser.isAdmin === false) {
         window.location.href = './index.html';
     }
 
@@ -18,7 +20,7 @@ if (!JSON.parse(localStorage.getItem('loggedUser'))) {
     const userManager = new UsersManager(storedList);
 
     removeAllButton.addEventListener('click', () => {
-        userManager.removeAll();
+        userManager.removeAllExcept(loggedUser.email);
         location.reload();
     });
 

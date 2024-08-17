@@ -31,8 +31,9 @@ export default class UsersManager {
         this.#usersList = [...newList];
         this.saveUsersList();
     }
-    removeAll() {
-        this.#usersList = [];
+    removeAllExcept(email) {
+        const newList = this.#usersList.filter(user => user.email === email);
+        this.#usersList = [...newList];
         this.saveUsersList();
     }
     validateEmail(email) {
