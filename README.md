@@ -16,7 +16,7 @@ This portfolio website is designed to provide potential employers and customers 
 
 * **About Me:** A brief introduction highlighting my skills and experience.
 * **Projects:** A section showcasing:
-    * **Static Portfolio Pages (HTML, CSS, SASS,Bootstrap):** Demonstrates my foundational web development skills by transforming existing designs into functional web pages using HTML, CSS, and SASS.
+    * **Static Landing Pages (HTML, CSS, SASS,Bootstrap):** Demonstrates my foundational web development skills by transforming existing designs into functional web pages using HTML, CSS, SASS and Bootstrap.
     * **JavaScript Projects:** Demonstrates my interactive coding skills with the following:
         * Math Quiz Game (Local Storage)
         * Countries Project (API Integration)
