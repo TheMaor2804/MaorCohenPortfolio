@@ -112,7 +112,7 @@ body {
 }
 
 #topHeading h1 {
-    font-size: 5rem;
+    font-size: 3rem;
 }
 
 #topHeading p {
@@ -248,6 +248,10 @@ body {
     #topHeading {
         flex-direction: row;
         align-self: stretch;
+    }
+
+    #topHeading h1 {
+        font-size: 5rem;
     }
 
     .text {
