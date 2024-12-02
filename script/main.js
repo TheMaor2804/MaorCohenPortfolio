@@ -26,8 +26,15 @@ if (hamburger) { hamburger.addEventListener('click', toggleDropdown); }
 //end
 
 //cv download button
-document.getElementById('cvDownload').addEventListener('click', function (event) {
+document.getElementById('cvDownload').addEventListener('click', (event) => {
     event.preventDefault();
-    alert('No Download Available Yet!');
+    let downloadLink = event.target.getAttribute('href');
+    if (!downloadLink || downloadLink === '#') {
+        alert('No Download Available Yet!');
+    } else {
+        console.log(downloadLink);
+
+        window.location.href = downloadLink;
+    }
 });
 //end

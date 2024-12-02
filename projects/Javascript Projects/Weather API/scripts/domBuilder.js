@@ -72,6 +72,49 @@ export const build = async () => {
 
     }
 
+    const createHourDiv = (hour, img, alt, degrees) => {
+        let div = document.createElement("div");
+        div.className = "hourly-forecast";
+        let hourP = document.createElement("p");
+        let imgWeather = document.createElement("img");
+        let degreesH4 = document.createElement("h4");
+
+        hourP.textContent = hour;
+        imgWeather.src = `https://openweathermap.org/img/wn/${img}.png`;
+        imgWeather.alt = alt;
+        degreesH4.textContent = degrees + "°";
+
+        div.appendChild(hourP);
+        div.appendChild(imgWeather);
+        div.appendChild(degreesH4);
+
+        return div;
+    }
+
+    const create5DayDiv = (day, img, alt, desc, min, max) => {
+        const div = document.createElement('div');
+        div.className = "daily-forecast";
+        const currentDay = document.createElement('p');
+        const imgWeatherDiv = document.createElement('div');
+        imgWeatherDiv.className = "imgTitle";
+        const imgWeather = document.createElement('img');
+        const description = document.createElement('h5');
+        const minMax = document.createElement('p');
+
+        currentDay.textContent = day;
+        imgWeather.src = `https://openweathermap.org/img/wn/${img}.png`;
+        imgWeather.alt = alt;
+        description.textContent = desc;
+        minMax.textContent = `${max}°/${min}°`
+
+        div.appendChild(currentDay)
+        imgWeatherDiv.appendChild(imgWeather)
+        imgWeatherDiv.appendChild(description)
+        div.appendChild(imgWeatherDiv)
+        div.appendChild(minMax)
+
+        return div;
+    }
 
     const modifyDom = async (city) => {
 
@@ -171,49 +214,7 @@ export const build = async () => {
         })
     }
 
-    const createHourDiv = (hour, img, alt, degrees) => {
-        let div = document.createElement("div");
-        div.className = "hourly-forecast";
-        let hourP = document.createElement("p");
-        let imgWeather = document.createElement("img");
-        let degreesH4 = document.createElement("h4");
 
-        hourP.textContent = hour;
-        imgWeather.src = `https://openweathermap.org/img/wn/${img}.png`;
-        imgWeather.alt = alt;
-        degreesH4.textContent = degrees + "°";
-
-        div.appendChild(hourP);
-        div.appendChild(imgWeather);
-        div.appendChild(degreesH4);
-
-        return div;
-    }
-
-    const create5DayDiv = (day, img, alt, desc, min, max) => {
-        const div = document.createElement('div');
-        div.className = "daily-forecast";
-        const currentDay = document.createElement('p');
-        const imgWeatherDiv = document.createElement('div');
-        imgWeatherDiv.className = "imgTitle";
-        const imgWeather = document.createElement('img');
-        const description = document.createElement('h5');
-        const minMax = document.createElement('p');
-
-        currentDay.textContent = day;
-        imgWeather.src = `https://openweathermap.org/img/wn/${img}.png`;
-        imgWeather.alt = alt;
-        description.textContent = desc;
-        minMax.textContent = `${max}°/${min}°`
-
-        div.appendChild(currentDay)
-        imgWeatherDiv.appendChild(imgWeather)
-        imgWeatherDiv.appendChild(description)
-        div.appendChild(imgWeatherDiv)
-        div.appendChild(minMax)
-
-        return div;
-    }
 
     searchBar();
     searchInput.value = '';

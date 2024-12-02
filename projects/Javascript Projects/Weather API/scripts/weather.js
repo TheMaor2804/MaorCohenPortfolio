@@ -29,12 +29,16 @@ export const getCityUVGeo = async (coord, dt) => {
 
     const lon = coord.lon;
     const lat = coord.lat;
-    const dailyUV = await fetch(
-        `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}&dt=${formatDT}`,
-        requestOptions
-    );
-    let uvData = await dailyUV.json();
-    return uvData;
+    try {
+        const dailyUV = await fetch(
+            `https://api.openuv.io/api/v1/uv?lat=${lat}&lng=${lon}&dt=${formatDT}`,
+            requestOptions
+        );
+        let uvData = await dailyUV.json();
+        return uvData;
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 export const getAllDataGeo = async (lon, lat) => {
