@@ -175,12 +175,13 @@ export const build = async () => {
 
 
         //5 day forecast
-
         let tempRangePerDate = {};
         weeklyList.forEach(date => {
             if (dateToDay(date.dt) != dateToDay(dailyData.dt))
                 tempRangePerDate[dateToDay(date.dt)] = []
         })
+
+
         let finalRangeTempPerDay = {}
         Object.keys(tempRangePerDate).forEach((day) => {
             weeklyList.forEach(date => {
@@ -196,9 +197,9 @@ export const build = async () => {
             finalRangeTempPerDay[day].min = Math.min(...tempRangePerDate[day].map(temp => temp.min))
         })
 
-
         weeklyList.forEach(date => {
-            if (dateToHour(date.dt) == 12 &&
+
+            if (dateToHour(date.dt) == 11 &&
                 dateToDay(date.dt) != dateToDay(dailyData.dt)) {
                 const day = dateToDay(date.dt);
                 const img = date.weather[0].icon;

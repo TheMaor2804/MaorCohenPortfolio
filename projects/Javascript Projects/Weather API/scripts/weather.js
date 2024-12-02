@@ -2,15 +2,19 @@ const API_KEY = "e085f13d76158499d4b07ebef62fcbd6";
 
 
 export const getCityWeatherGeo = async (lon, lat) => {
-    const weeklyCast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${lat}&lon=${lon}&appid=${API_KEY}`);
-    const dailyCast = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+    try {
+        const weeklyCast = await fetch(`https://api.openweathermap.org/data/2.5/forecast?units=metric&lat=${lat}&lon=${lon}&appid=${API_KEY}`);
+        const dailyCast = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&lat=${lat}&lon=${lon}&appid=${API_KEY}`);
 
 
-    let dailyData = await dailyCast.json();
-    let weeklyData = await weeklyCast.json();
+        let dailyData = await dailyCast.json();
+        let weeklyData = await weeklyCast.json();
 
 
-    return [dailyData, weeklyData];
+        return [dailyData, weeklyData];
+    } catch (e) {
+        console.log(e);
+    }
 }
 
 export const getCityUVGeo = async (coord, dt) => {
